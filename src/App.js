@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchAppBar from './components/navbar/Navbar';
 import Home from './components/pages/Home';
+import Footer from './components/footer/Footer';
 import './App.css';
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
     <div>
       <SearchAppBar />
       <Home />
+      <Footer />
     </div>
   );
 }
