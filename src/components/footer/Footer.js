@@ -17,13 +17,13 @@ const Footer = () => {
     <Grid alignContent="center">
       <Typography variant="overline">
       <Link href={dudUrl} align="center" className={classes.link}>
-        Bottom Nav
+        LinkedIn
       </Link>
       <Link href={dudUrl} align="center" className={classes.link}>
-        Bottom Nav
+        Facebook
       </Link>
       <Link href={dudUrl} align="center" className={classes.link}>
-        Bottom Nav
+        Twitter
       </Link>
       </Typography>
     </Grid>
