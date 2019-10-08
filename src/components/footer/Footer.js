@@ -14,18 +14,20 @@ const Footer = () => {
   const classes = useStyles();
   const dudUrl = '';
   return (
-    <Grid alignContent="center">
-      <Typography variant="overline">
-      <Link href={dudUrl} align="center" className={classes.link}>
-        LinkedIn
-      </Link>
-      <Link href={dudUrl} align="center" className={classes.link}>
-        Facebook
-      </Link>
-      <Link href={dudUrl} align="center" className={classes.link}>
-        Twitter
-      </Link>
-      </Typography>
+    <Grid container justify="center">
+      <Grid item>
+        <Typography variant="overline">
+        <Link href={dudUrl} align="center" className={classes.link}>
+          LinkedIn
+        </Link>
+        <Link href={dudUrl} align="center" className={classes.link}>
+          Facebook
+        </Link>
+        <Link href={dudUrl} align="center" className={classes.link}>
+          Twitter
+        </Link>
+        </Typography>
+      </Grid>
     </Grid>
   );
 }

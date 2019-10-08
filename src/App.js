@@ -17,19 +17,12 @@ const App = () => {
   return (
     <div>
       <SearchAppBar />
-      <Grid container className={classes.root} spacing={2}>
+      <Grid container className={classes.root} spacing={2} justify="center">
         <Grid item xs={12}>
           <Home />
         </Grid>
-        </Grid>
-        <Grid 
-          container
-          justify="center"
-        >
-          <Grid item>
-            <Footer />
-          </Grid>
-        </Grid>
+      </Grid>
+      <Footer />
     </div>
   );
 }
