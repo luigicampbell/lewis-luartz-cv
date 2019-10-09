@@ -63,7 +63,7 @@ const  Home = () => {
             component="p"
             align="justify"
           >
-            As a first-generation Latino student, Lewis went into academia without the social or cultural capital many others. The mentors Lewis made during his early academic career helped him develop into a professional researcher and instructor in spite of this initial deficit. Ultimately, this helped solidify Lewis's desire to give back to the community of underrepresented students in the academic world by pursuing a career in academia and serving as a mentor to them.
+            As a first-generation Latino student, Lewis went into academia without the social or cultural capital of many others. The mentors Lewis made during his early academic career helped him develop into a professional researcher and instructor in spite of this initial deficit. Ultimately, this helped solidify Lewis's desire to give back to the community of underrepresented students in the academic world by pursuing a career in academia and serving as a mentor to them.
           </Typography>
           <br />
           <Typography 

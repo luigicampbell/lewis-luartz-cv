@@ -1,35 +1,35 @@
 import React from 'react';
-import Link from '@material-ui/core/Link';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid } from '@material-ui/core';
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import TwitterIcon from '@material-ui/icons/Twitter';
 
-const useStyles = makeStyles(theme => ({
-  link: {
-    margin: theme.spacing(1),
+const useStyles = makeStyles({
+  root: {
+    width: '100%',
+    position: 'fixed',
+    bottom: 0,
   },
-}));
+});
 
-const Footer = () => {
+export default function Footer() {
   const classes = useStyles();
-  const dudUrl = '';
+  const [value, setValue] = React.useState(0);
+
   return (
-    <Grid container justify="center">
-      <Grid item>
-        <Typography variant="overline">
-        <Link href={dudUrl} align="center" className={classes.link}>
-          LinkedIn
-        </Link>
-        <Link href={dudUrl} align="center" className={classes.link}>
-          Facebook
-        </Link>
-        <Link href={dudUrl} align="center" className={classes.link}>
-          Twitter
-        </Link>
-        </Typography>
-      </Grid>
-    </Grid>
+    <BottomNavigation
+      value={value}
+      onChange={(event, newValue) => {
+        setValue(newValue);
+      }}
+      showLabels
+      className={classes.root}
+    >
+      <BottomNavigationAction label="LinkedIn" icon={<LinkedInIcon />} />
+      <BottomNavigationAction label="Instagram" icon={<InstagramIcon />} />
+      <BottomNavigationAction label="Twitter" icon={<TwitterIcon />} />
+    </BottomNavigation>
   );
 }
-
-export default Footer;
