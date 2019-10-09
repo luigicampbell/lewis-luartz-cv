@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import Home from './components/pages/Home';
+import Footer from './components/footer/Footer';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -16,8 +17,10 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import DescriptionIcon from '@material-ui/icons/DescriptionTwoTone';
+import SyllabiIcon from '@material-ui/icons/ImportContactsTwoTone';
+import WorkOutlineIcon from '@material-ui/icons/WorkTwoTone';
+import ContactMeIcon from '@material-ui/icons/MailTwoTone';
 
 const drawerWidth = 240;
 
@@ -147,21 +150,45 @@ export default function PersistentDrawerLeft() {
         </div>
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          <ListItem button key={'C.V.'}>
+            <ListItemIcon>
+              <DescriptionIcon />
+            </ListItemIcon>
+            <ListItemText primary={'C.V.'} />
+          </ListItem>
+          <ListItem button key={'Syllabi'}>
+            <ListItemIcon>
+              <SyllabiIcon />
+            </ListItemIcon>
+            <ListItemText primary={'Syllabi'} />
+          </ListItem>
+          <ListItem button key={'Teaching'}>
+            <ListItemIcon>
+              <WorkOutlineIcon />
+            </ListItemIcon>
+            <ListItemText primary={'Teaching'} />
+          </ListItem>
+          {/* {['C.V.', 'Syllabi', 'Teaching'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemIcon>{index % 2 === 0 ? <DescriptionIcon /> : <SyllabiIcon />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
-          ))}
+          ))} */}
         </List>
         <Divider />
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          <ListItem button key={'Contact'}>
+            <ListItemIcon>
+              <ContactMeIcon />
+            </ListItemIcon>
+            <ListItemText primary={'Contact'} />
+          </ListItem>
+          {/* {['All mail', 'Trash', 'Spam'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemIcon>{index % 2 === 0 ? <DescriptionIcon /> : <SyllabiIcon />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
-          ))}
+          ))} */}
         </List>
       </Drawer>
       <main
@@ -171,7 +198,9 @@ export default function PersistentDrawerLeft() {
       >
         <div className={classes.drawerHeader} />
        <Home />
+       <br />
       </main>
+      <Footer />
     </div>
   );
 }

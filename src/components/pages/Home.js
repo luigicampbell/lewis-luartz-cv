@@ -63,15 +63,14 @@ const  Home = () => {
             component="p"
             align="justify"
           >
-            As a first-generation Latino student, Lewis went into academia without the social or cultural capital of many others. The mentors Lewis made during his early academic career helped him develop into a professional researcher and instructor in spite of this initial deficit. Ultimately, this helped solidify Lewis's desire to give back to the community of underrepresented students in the academic world by pursuing a career in academia and serving as a mentor to them.
+            As a first-generation Latino student, Lewis went into academia without the social or cultural capital of many others. The mentors Lewis made during his early academic career helped him develop into a professional researcher and instructor in spite of this initial deficit. Ultimately, this helped solidify Lewis's desire to give back to the community of underrepresented students in the academic world by pursuing a career in academia and serving as a mentor to those groups.
           </Typography>
           <br />
           <Typography 
             component="p"
             align="justify"
           >
-            Lewis's specializes in research on comparative politics, focusing on elections and political parties from an institutional perspective and game theoretic approaches to political phenomena. His regions of expertise are predominantly on Western Europe and East Asia, although he does have knowledge on North American cases. Lewis has taught several introductory and upper-level courses, including Introduction to Comparative Politics, Conflict Resolution, the Nation-State and Capitalism, and Politics and Economic Policy. 
-          </Typography>
+            Lewis specializes in research on comparative politics, focusing on elections and political parties from an institutional perspective and applying game theoretic approaches to political phenomena. His regions of expertise are predominantly Western Europe and East Asia, although he does have knowledge on North American cases. Lewis has taught several introductory and upper-level courses, including Introduction to Comparative Politics, Conflict Resolution, the Nation-State and Capitalism, and Politics and Economic Policy.          </Typography>
           <br />
           <Typography 
             component="p"
