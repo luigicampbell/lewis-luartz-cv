@@ -26,7 +26,7 @@ const Teaching = () => {
             return (
               <li key={syllabus.name}>
                 <Typography>
-                  {syllabus.class}: {syllabus.name} Syllabus: 
+                  {syllabus.class}: {syllabus.name} Syllabus:&nbsp; 
                   {syllabus.summer && '['}
                     {syllabus.summer && <a rel="noopener noreferrer" target="_blank" alt="summer" title="summer syllabus" href={syllabus.summer}>Summer</a>}
                   {syllabus.summer && ']'}
