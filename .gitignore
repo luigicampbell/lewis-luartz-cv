@@ -1,5 +1,8 @@
 # Assets
 /src/assets
+# Public
+/public/Luartz_CV.pdf
+/public/UCRSEAL.png
 # Logs
 logs
 *.log

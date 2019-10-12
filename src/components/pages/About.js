@@ -2,6 +2,7 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardMedia, CardContent } from '@material-ui/core';
+const profilePic = require('../../assets/images/about_pic.jpg');
 
 const useStyles = makeStyles(theme => ({
   media: {
@@ -47,12 +48,12 @@ const  About = () => {
         <CardMedia 
           title="Lewis Luartz"
           className={classes.media}
-          image={require('../../assets/images/about_pic.jpg')}
+          image={profilePic}
           alt="Lewis Luartz - Lecture"
         />
         <CardContent>
           <img 
-            src={require('../../assets/images/about_pic.jpg')}
+            src={profilePic}
             alt="Lewis Luartz - Lecture"
             title="Lewis Luartz"
             className={classes.inlineMedia}
