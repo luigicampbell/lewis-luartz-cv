@@ -30,12 +30,12 @@ const Teaching = () => {
                   {syllabus.summer && '['}
                     {syllabus.summer && <a rel="noopener noreferrer" target="_blank" alt="summer" title="summer syllabus" href={syllabus.summer}>Summer</a>}
                   {syllabus.summer && ']'}
-                  {syllabus.summer && '['}
-                    {syllabus.summer && <a rel="noopener noreferrer" target="_blank" alt="quarter" title="quarter syllabus" href={syllabus.quarter}>Quarter</a>}
-                  {syllabus.summer && ']'}
-                  {syllabus.summer && '['}
-                    {syllabus.summer && <a rel="noopener noreferrer" target="_blank" alt="semester" title="semester syllabus" href={syllabus.semester}>Semester</a>}
-                  {syllabus.summer && ']'}
+                  {syllabus.quarter && '['}
+                    {syllabus.quarter && <a rel="noopener noreferrer" target="_blank" alt="quarter" title="quarter syllabus" href={syllabus.quarter}>Quarter</a>}
+                  {syllabus.quarter && ']'}
+                  {syllabus.semester && '['}
+                    {syllabus.semester && <a rel="noopener noreferrer" target="_blank" alt="semester" title="semester syllabus" href={syllabus.semester}>Semester</a>}
+                  {syllabus.semester && ']'}
                 </Typography>
               </li>
             );
