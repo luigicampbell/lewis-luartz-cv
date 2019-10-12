@@ -22,10 +22,15 @@ const useStyles = makeStyles(theme => ({
       marginLeft: 15,
       marginBottom: 15
     },
+  },
+  highlitedText:{
+    textDecoration: 'underline',
+    textDecorationColor: '#F1AB00',
+    textDecorationStyle: 'double'
   }
 }));
 
-const  Home = () => {
+const  About = () => {
   const classes = useStyles();
 
   return (
@@ -36,7 +41,7 @@ const  Home = () => {
         style={{fontSize: '2rem'}}
         
       >          
-        Home
+        About
       </Typography>
       <Card title="About Lewis Luartz">
         <CardMedia 
@@ -70,7 +75,16 @@ const  Home = () => {
             component="p"
             align="justify"
           >
-            Lewis specializes in research on comparative politics, focusing on elections and political parties from an institutional perspective and applying game theoretic approaches to political phenomena. His regions of expertise are predominantly Western Europe and East Asia, although he does have knowledge on North American cases. Lewis has taught several introductory and upper-level courses, including Introduction to Comparative Politics, Conflict Resolution, the Nation-State and Capitalism, and Politics and Economic Policy.          </Typography>
+            Lewis specializes in research on <span className={classes.highlitedText}>comparative politics</span>, focusing on elections and political parties from an institutional perspective and applying <span className={classes.highlitedText}>game theoretic approaches to political phenomena</span>. His regions of expertise are predominantly <strong>Western Europe</strong> and <strong>East Asia</strong>, although he does have knowledge on North American cases. Lewis has taught several introductory and upper-level courses, including <em>Introduction to Comparative Politics</em>, <em>Conflict Resolution</em>, <em>the Nation-State and Capitalism</em>, and <em>Politics and Economic Policy</em>.
+          </Typography>
+          <br />
+          <Typography 
+            component="p"
+            variant="caption"
+          >
+            Dissertation Year Program (DYP) Fellow 2019-2020 | Ph.D. Candidate (ABD)
+            University of California, Riverside Department of Political Science
+          </Typography>
           <br />
           <Typography 
             component="p"
@@ -84,4 +98,4 @@ const  Home = () => {
     </div>
   );
 }
-export default Home;
+export default About;

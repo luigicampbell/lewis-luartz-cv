@@ -1,10 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import TwitterIcon from '@material-ui/icons/Twitter';
+import { BottomNavigation, BottomNavigationAction, Link } from '@material-ui/core';
+import { LinkedIn as LinkedInIcon, Instagram as InstagramIcon, Twitter as TwitterIcon } from '@material-ui/icons';
 
 const useStyles = makeStyles({
   root: {
@@ -27,9 +24,9 @@ export default function Footer() {
       showLabels
       className={classes.root}
     >
-      <BottomNavigationAction label="LinkedIn" icon={<LinkedInIcon />} />
-      <BottomNavigationAction label="Instagram" icon={<InstagramIcon />} />
-      <BottomNavigationAction label="Twitter" icon={<TwitterIcon />} />
+      <BottomNavigationAction label="LinkedIn" target="_blank" href="https://www.linkedin.com/in/lewisluartz/"icon={<LinkedInIcon />} />
+      <BottomNavigationAction label="Instagram" target="_blank" href="https://www.instagram.com/lewis.luartz/?hl=en"icon={<InstagramIcon />} />
+      <BottomNavigationAction label="Twitter" target="_blank" href="https://twitter.com/lewisluartz?lang=en"icon={<TwitterIcon />} />
     </BottomNavigation>
   );
 }
