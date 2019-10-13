@@ -45,7 +45,7 @@ const Contact = () => {
           />
           <Divider />
           <CardContent>
-            <Typography component="p">
+            <Typography component="p" variant="overline">
               <FormControlLabel
                 control={
                   <a target="_top"
@@ -60,7 +60,7 @@ const Contact = () => {
                 labelPlacement="end"
               />
             </Typography>
-            <Typography component="p">
+            <Typography component="p" variant="overline">
               <FormControlLabel
                 control={
                   <a target="_top"
@@ -75,7 +75,7 @@ const Contact = () => {
                 labelPlacement="end"
               />
             </Typography>
-            <Typography component="p">
+            <Typography component="p" variant="overline">
               <FormControlLabel
                 control={
                   <a target="_top"
@@ -92,10 +92,10 @@ const Contact = () => {
             </Typography>
             <br />
             <Typography component="p">
-              If you are in the Riverside area, stop by! 
+              If you are in the <strong>Riverside</strong> area, stop by! 
             </Typography>
             <br />
-            <Typography component="p">
+            <Typography component="p" variant="overline">
               900 University Ave.
               <br /> 
               2121E Watkins Hall

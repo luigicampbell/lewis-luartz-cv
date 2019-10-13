@@ -98,7 +98,7 @@ const  About = () => {
             component="p"
             align="justify"
           >
-            Lewis specializes in research on <span className={classes.highlitedText}>comparative politics</span>, focusing on elections and political parties from an institutional perspective and applying <span className={classes.highlitedText}>game theoretic approaches to political phenomena</span>. His regions of expertise are predominantly <strong>Western Europe</strong> and <strong>East Asia</strong>, although he does have knowledge on North American cases. Lewis has taught several introductory and upper-level courses, including <em>Introduction to Comparative Politics</em>, <em>Conflict Resolution</em>, <em>the Nation-State and Capitalism</em>, and <em>Politics and Economic Policy</em>.
+            Lewis specializes in research on <span className={classes.highlitedText}>comparative politics</span>, focusing on elections and political parties from an institutional perspective and applying <span className={classes.highlitedText}>game theoretic approaches to political phenomena</span>. His regions of expertise are predominantly <strong>Western Europe</strong> and <strong>East Asia</strong>, although he does have knowledge on <strong>North American</strong> cases. Lewis has taught several introductory and upper-level courses, including <em>Introduction to Comparative Politics</em>, <em>Conflict Resolution</em>, <em>the Nation-State and Capitalism</em>, and <em>Politics and Economic Policy</em>.
           </Typography>
           <br />
           <Typography 

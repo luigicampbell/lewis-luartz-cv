@@ -15,7 +15,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
   avatar: {
     backgroundColor: '#F1AB00',
-  }
+  },
 }));
 
 const Teaching = () => {
@@ -48,7 +48,7 @@ const Teaching = () => {
             {syllabi.map(syllabus => {
               return (
                 <li key={syllabus.name}>
-                  <Typography>
+                  <Typography component="p" variant="overline">
                     {syllabus.class}: {syllabus.name} Syllabus:&nbsp; 
                     {syllabus.summer && '['}
                       {syllabus.summer && <a rel="noopener noreferrer" target="_blank" alt="summer" title="summer syllabus" href={syllabus.summer}>Summer</a>}
