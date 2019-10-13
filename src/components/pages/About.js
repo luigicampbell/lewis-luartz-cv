@@ -1,7 +1,14 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { Card, CardMedia, CardContent } from '@material-ui/core';
+import  { Avatar,
+          Card, 
+          CardContent, 
+          CardHeader,
+          CardMedia,
+          Divider
+          } from '@material-ui/core';
+import { HomeTwoTone } from '@material-ui/icons'
 const profilePic = require('../../assets/images/about_pic.jpg');
 
 const useStyles = makeStyles(theme => ({
@@ -28,6 +35,9 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'underline',
     textDecorationColor: '#F1AB00',
     textDecorationStyle: 'double'
+  },
+  avatar: {
+    backgroundColor: '#F1AB00',
   }
 }));
 
@@ -36,15 +46,27 @@ const  About = () => {
 
   return (
     <div>
-      <Typography 
-        component="h1"
-        variant="overline"
-        style={{fontSize: '2rem'}}
-        
-      >          
-        About
-      </Typography>
       <Card title="About Lewis Luartz">
+        <CardHeader
+          avatar={
+            <Avatar 
+              aria-label="teaching"
+              className={classes.avatar}  
+            >
+              <HomeTwoTone />
+            </Avatar>
+          }
+          disableTypography={false}
+          title="ABOUT"
+          subheader="Dissertation Year Program (DYP) Fellow 2019-2020 | Ph.D. Candidate (ABD)
+          University of California, Riverside Department of Political Science"
+          titleTypographyProps={
+            {
+              variant:'h4'
+            }
+          }
+        />
+        <Divider />
         <CardMedia 
           title="Lewis Luartz"
           className={classes.media}
@@ -77,14 +99,6 @@ const  About = () => {
             align="justify"
           >
             Lewis specializes in research on <span className={classes.highlitedText}>comparative politics</span>, focusing on elections and political parties from an institutional perspective and applying <span className={classes.highlitedText}>game theoretic approaches to political phenomena</span>. His regions of expertise are predominantly <strong>Western Europe</strong> and <strong>East Asia</strong>, although he does have knowledge on North American cases. Lewis has taught several introductory and upper-level courses, including <em>Introduction to Comparative Politics</em>, <em>Conflict Resolution</em>, <em>the Nation-State and Capitalism</em>, and <em>Politics and Economic Policy</em>.
-          </Typography>
-          <br />
-          <Typography 
-            component="p"
-            variant="caption"
-          >
-            Dissertation Year Program (DYP) Fellow 2019-2020 | Ph.D. Candidate (ABD)
-            University of California, Riverside Department of Political Science
           </Typography>
           <br />
           <Typography 

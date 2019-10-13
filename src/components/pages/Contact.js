@@ -1,32 +1,50 @@
 import React from 'react';
-import { 
+import {
+  Avatar,
   Card, 
-  CardContent, 
-  Typography,
+  CardContent,
+  CardHeader,
+  Divider,
   FormControlLabel,
   IconButton,
-  Grid
+  Grid,
+  Typography
 } from '@material-ui/core';
-import { EmailTwoTone } from '@material-ui/icons'
+import { makeStyles } from '@material-ui/core/styles';
+import { EmailTwoTone, AlternateEmailTwoTone } from '@material-ui/icons'
+
+const useStyles = makeStyles( theme => ({
+  avatar: {
+    backgroundColor: '#F1AB00',
+  }
+}));
 
 const Contact = () => {
+  const classes = useStyles();
   return (
     <React.Fragment>
-      <Typography 
-          component="h1"
-          variant="overline"
-          style={{fontSize: '2rem'}}
-          
-        >          
-        Contact
-      </Typography>
       <Grid container justify="center">
         <Card>
+          <CardHeader
+            avatar={
+              <Avatar 
+                aria-label="teaching"
+                className={classes.avatar}  
+              >
+                <EmailTwoTone />
+              </Avatar>
+            }
+            disableTypography={false}
+            title="CONTACT"
+            subheader="For any inquiries, please feel free to contact me:"
+            titleTypographyProps={
+              {
+                variant:'h4'
+              }
+            }
+          />
+          <Divider />
           <CardContent>
-            <Typography component="p">
-              For any inquiries, please feel free to contact me: 
-            </Typography>
-            <br />
             <Typography component="p">
               <FormControlLabel
                 control={
@@ -34,7 +52,7 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       href="mailto:Lewis.A.Luartz@gmail.com">
                       <IconButton color="primary">
-                          <EmailTwoTone />
+                          <AlternateEmailTwoTone />
                       </IconButton>
                   </a>
                 }
@@ -49,7 +67,7 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       href="mailto:Lewis.Luartz@email.ucr.edu">
                       <IconButton color="primary">
-                          <EmailTwoTone />
+                          <AlternateEmailTwoTone />
                       </IconButton>
                   </a>
                 }
@@ -64,7 +82,7 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       href="mailto:Luartz@chapman.edu">
                       <IconButton color="primary">
-                          <EmailTwoTone />
+                          <AlternateEmailTwoTone />
                       </IconButton>
                   </a>
                 }

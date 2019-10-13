@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { BottomNavigation, BottomNavigationAction, Link } from '@material-ui/core';
+import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
 import { LinkedIn as LinkedInIcon, Instagram as InstagramIcon, Twitter as TwitterIcon } from '@material-ui/icons';
 
 const useStyles = makeStyles({
