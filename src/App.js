@@ -238,10 +238,11 @@ export default function App() {
           <div className={classes.drawerHeader} />
           <Switch>
             <Route exact path='/' component={About} />
-            <Route exact path='/cv' component={CV} />
-            <Route exact path='/contact' component={Contact} />
-            <Route exact path='/research' component={Research} />
-            <Route exact path='/teaching' component={Teaching} />
+            <Route path='/cv' component={CV} />
+            <Route path='/contact' component={Contact} />
+            <Route path='/research' component={Research} />
+            <Route path='/teaching' component={Teaching} />
+            <Route path='/*' render={() => <About/>} />
           </Switch>
           <br />
         </main>
