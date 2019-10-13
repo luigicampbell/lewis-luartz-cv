@@ -21,7 +21,11 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 const useStyles = makeStyles(theme => ({
   avatar: {
     backgroundColor: '#F1AB00',
-  }
+  },
+  canvas: {
+    width: '100% !important',
+    height: 'auto !important',
+  },
 }));
 
 
@@ -29,8 +33,14 @@ const CV = () => {
   const classes = useStyles();
   const [numPages, setNumPages] = React.useState(null);
   const [pageNumber, setPageNumber] = React.useState(1);
+  const [pageScale, setPageScale] = React.useState(1.0);
 
-  const onDocumentLoadSuccess = ({ numPages }) => setNumPages(numPages);
+  const onDocumentLoadSuccess = ({ numPages }) => {
+    console.log('this is the window size: ',window.innerWidth);
+    const scale = window.innerWidth < 700 ? 0.5 : 1.0;
+    setPageScale(scale);
+    setNumPages(numPages);
+  };
   
   const onIncrementPage = () => {
     let currentPage = pageNumber;
@@ -70,17 +80,20 @@ const CV = () => {
               />
               <Divider />
               <CardContent>
-                <Document 
-                  file={cv}
-                  onLoadSuccess={onDocumentLoadSuccess}
-                >
-                  <Page 
-                    pageNumber={pageNumber} 
-                    size="A4"
-                    renderMode="svg"
-                    renderTextLayer={false}
-                  />
-                </Document>
+                <div className={classes.canvas}>
+                  <Document 
+                    file={cv}
+                    onLoadSuccess={onDocumentLoadSuccess}
+                  >
+                    <Page 
+                      pageNumber={pageNumber} 
+                      size="A4"
+                      renderMode="svg"
+                      renderTextLayer={false}
+                      scale={pageScale}
+                    />
+                  </Document>
+                </div>
               </CardContent>
             </Card>
           </Grid>
